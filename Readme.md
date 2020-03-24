@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Людмила Арсланбекова](https://up.htmlacademy.ru/adaptive/19/user/1197715).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Белогубова](https://htmlacademy.ru/profile/id87018).
 
 ---
 
