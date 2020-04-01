@@ -11,7 +11,7 @@
     <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-image"
         src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина «Мишка»"></a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle button" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -34,12 +34,12 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title">Вязание на заказ</h1>
-    <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+    <h1 class="h1">Вязание на заказ</h1>
+    <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы
       уточнить детали.</p>
     <form class="form" method="POST" action="https://echo.htmlacademy.ru/">
-      <fieldset class="form__type">
+      <fieldset class="form__field">
         <legend class="form__title">Тип</legend>
         <ul class="form__list radio-list">
           <li class="form__option">
@@ -52,7 +52,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__color">
+      <fieldset class="form__field">
         <legend class="form__title">Цвет</legend>
         <ul class="form__list checkbox-list">
           <li class="form__option">
@@ -81,7 +81,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__name">
+      <fieldset class="form__field">
         <legend class="form__title">ФИО</legend>
         <ul class="form-list input-list">
           <li class="form__option">
@@ -98,15 +98,15 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__phone">
+      <fieldset class="form__field">
         <legend class="form__title">Тел</legend>
         <input class="form__input"  type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
       </fieldset>
-      <fieldset class="form__email">
+      <fieldset class="form__field">
         <legend class="form__title">e-mail</legend>
         <input class="form__input"  type="email" name="email" id="email" placeholder="Ваш Email*" required>
       </fieldset>
-      <fieldset class="form__additional">
+      <fieldset class="form__field">
         <legend class="form__title">Доп</legend>
         <textarea name="additional-info" id="additional-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
