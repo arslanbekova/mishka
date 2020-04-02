@@ -9,8 +9,11 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-      alt="Логотип магазина «Мишка»"></a>
+    <a class="page-header__logo-link" href="index.html">
+      <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
+      </svg>
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle button" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -41,7 +44,7 @@
       <ul class="catalog-list">
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-hare-mobile@1x.jpg" width="260px" height="195px">
           </a>
           <a class="catalog-list__item-link" href="#">
             <h3 class="catalog-list__item-title h3">Зайчик-попрыгайчик</h3>
@@ -51,7 +54,7 @@
         </li>
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260px" height="195px">
           </a>
           <a class="catalog-list__item-link" href="#">
             <h3 class="catalog-list__item-title h3">Корзинка для белья</h3>
@@ -61,7 +64,7 @@
         </li>
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-toys-mobile@1x.jpg" width="260px" height="195px">
           </a>
           <a class="catalog-list__item-link" href="#">
             <h3 class="catalog-list__item-title h3">Большая корзинка для игрушек</h3>
@@ -74,8 +77,7 @@
 
     <section class="video">
       <h2 class="h3">Процесс производства</h2>
-      <video width="260px" height="150px" src="#" poster="https://via.placeholder.com/260x150"
-        preload="metadata"></video>
+      <video width="260px" height="150px" src="#" poster="img/video-mobile@1x.jpg" preload="metadata"></video>
       <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a class="button" href="#">Сделать заказ</a>
     </section>
@@ -92,8 +94,9 @@
       </div>
       <p class="copyright">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright-image" src="https://via.placeholder.com/27x34" width="27px" height="34px"
-            alt="Логотип компании-создателя сайта">
+          <svg class="copyright-image" width="27px" height="34px" alt="Логотип компании-создателя сайта">
+            <use xlink:href="img/sprite-manual.svg#logo-academy"></use>
+          </svg>
         </a>
       </p>
     </div>

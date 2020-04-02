@@ -9,8 +9,11 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-image"
-        src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина «Мишка»"></a>
+    <a class="page-header__logo-link" href="index.html">
+      <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
+      </svg>
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle button" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -127,8 +130,9 @@
       </div>
       <p class="copyright">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright-image" src="https://via.placeholder.com/27x34" width="27px" height="34px"
-            alt="Логотип компании-создателя сайта">
+          <svg class="copyright-image" width="27px" height="34px" alt="Логотип компании-создателя сайта">
+            <use xlink:href="img/sprite-manual.svg#logo-academy"></use>
+          </svg>
         </a>
       </p>
     </div>
