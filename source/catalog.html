@@ -4,12 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин «Мишка»: каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-      alt="Логотип магазина «Мишка»"></a>
+    <a class="page-header__logo-link" href="index.html">
+      <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
+      </svg>
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle button" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -40,43 +44,50 @@
       <ul class="catalog-list">
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-hare-mobile@1x.jpg" width="260px" height="195px">
           </a>
-          <a class="catalog-list__item-link" href="#">
-            <h3 class="catalog-list__item-title h3">Зайчик-попрыгайчик</h3>
-          </a>
-          <p class="catalog-list__item-description">Рост 30 см, вес 200 г</p>
-          <p class="catalog-list__item-price">1 200 руб.</p>
+          <div class="catalog-list__description-wrapper">
+            <a class="catalog-list__item-link" href="#">
+              <h3 class="catalog-list__item-title h3">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="catalog-list__item-description">Рост 30 см, вес 200 г</p>
+            <p class="catalog-list__item-price">1 200 руб.</p>
+          </div>
         </li>
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260px" height="195px">
           </a>
-          <a class="catalog-list__item-link" href="#">
-            <h3 class="catalog-list__item-title h3">Корзинка для белья</h3>
-          </a>
-          <p class="catalog-list__item-description">Диаметр 15 см, высота 10 см</p>
-          <p class="catalog-list__item-price">690 руб.</p>
+          <div class="catalog-list__description-wrapper">
+            <a class="catalog-list__item-link" href="#">
+              <h3 class="catalog-list__item-title h3">Корзинка для белья</h3>
+            </a>
+            <p class="catalog-list__item-description">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog-list__item-price">690 руб.</p>
+          </div>
         </li>
         <li class="catalog-list__item">
           <a class="catalog-list__item-link" href="#">
-            <img class="catalog-list__item-image" src="https://via.placeholder.com/260x195" width="260px" height="195px">
+            <img class="catalog-list__item-image" src="img/photo-toys-mobile@1x.jpg" width="260px" height="195px">
           </a>
-          <a class="catalog-list__item-link" href="#">
-            <h3 class="catalog-list__item-title h3">Большая корзинка для игрушек</h3>
-          </a>
-          <p class="catalog-list__item-description">Диаметр 30 см, высота 30 см</p>
-          <p class="catalog-list__item-price">1 500 руб.</p>
+          <div class="catalog-list__description-wrapper">
+            <a class="catalog-list__item-link" href="#">
+              <h3 class="catalog-list__item-title h3">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="catalog-list__item-description">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog-list__item-price">1 500 руб.</p>
+          </div>
         </li>
       </ul>
     </section>
 
     <section class="video">
-      <h2 class="h3">Процесс производства</h2>
-      <video width="260px" height="150px" src="#" poster="https://via.placeholder.com/260x150"
-        preload="metadata"></video>
-      <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="button" href="#">Сделать заказ</a>
+      <h2 class="video__title h3">Процесс производства</h2>
+      <video width="260px" height="150px" src="#" poster="img/video-mobile@1x.jpg" preload="metadata"></video>
+      <div class="video__description">
+        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="button" href="#">Сделать заказ</a>
+      </div>
     </section>
   </main>
 
@@ -91,8 +102,9 @@
       </div>
       <p class="copyright">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright-image" src="https://via.placeholder.com/27x34" width="27px" height="34px"
-            alt="Логотип компании-создателя сайта">
+          <svg class="copyright-image" width="27px" height="34px" alt="Логотип компании-создателя сайта">
+            <use xlink:href="img/sprite-manual.svg#logo-academy"></use>
+          </svg>
         </a>
       </p>
     </div>
