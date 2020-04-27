@@ -3,6 +3,7 @@
   font-size: 27px;
   font-weight: bold;
   line-height: 30px;
+  text-align: center;
 
   background-color: @h1-bg;
 
@@ -14,13 +15,26 @@
 .h1--index {
   color: #010000;
 
-  padding-top: 76px;
-  padding-bottom: 120px;
-  padding-left: 39px;
+  margin: 0 auto;
+  padding: 76px 0 120px 0;
 
   width: 244px;
 
   text-align: center;
 
   background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .h1 {
+    font-size: 43px;
+    line-height: 50px;
+    color: @black-base;
+  }
+
+  .h1--index {
+    width: 494px;
+    padding-top: 160px;
+    padding-bottom: 371px;
+  }
 }

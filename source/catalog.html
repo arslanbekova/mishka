@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин «Мишка»: каталог</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,6 +14,9 @@
     <a class="page-header__logo-link" href="index.html">
       <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
         <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
+      </svg>
+      <svg class="page-header__logo-image-tablet" width="112" height="46" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-tablet"></use>
       </svg>
     </a>
     <nav class="main-nav">
@@ -35,6 +40,7 @@
         </ul>
       </div>
     </nav>
+    <p class="page-header__delivery">Бесплатная доставка по России</p>
   </header>
 
   <main class="page-main">
@@ -93,6 +99,9 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <svg class="page-footer__logo-image" width="102" height="34" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
+      </svg>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item"><a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a></li>

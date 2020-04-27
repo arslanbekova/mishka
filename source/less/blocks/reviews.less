@@ -1,5 +1,7 @@
 .reviews {
   margin-bottom: 44px;
+
+  position: relative;
 }
 
 .reviews__author-name {
@@ -14,4 +16,39 @@
   font-size: 17px;
   line-height: 30px;
   font-style: normal;
+}
+
+.reviews__write {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .reviews__author-name {
+    display: block;
+  }
+
+  .reviews__prev,
+  .reviews__next,
+  .reviews__write {
+    position: absolute;
+  }
+
+  .reviews__prev {
+    bottom: 0;
+    right: 240px;
+  }
+
+  .reviews__next {
+    bottom: 0;
+    right: 0;
+  }
+
+  .reviews__write {
+    top: 0;
+    right: 0;
+
+    font-size: 17px;
+  }
 }
