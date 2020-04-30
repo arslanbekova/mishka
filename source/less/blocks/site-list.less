@@ -1,6 +1,16 @@
+.site-list__item--new,
+.site-list__item--sale {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .site-list {
     order: 1;
+
+    position: relative;
+    top: 20px;
+    max-width: 305px;
+    justify-content: space-between;
   }
 }
 
@@ -15,6 +25,11 @@
 
   .site-list__item {
     width: 50%;
+  }
+
+  .site-list__item--new,
+  .site-list__item--sale {
+    display: block;
   }
 
 

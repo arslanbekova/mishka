@@ -1,7 +1,13 @@
 .page-header {
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 
-  margin-bottom: 1px;
+  position: relative;
+}
+
+.page-header__logo-image {
+  display: block;
+  margin: 0 auto;
+  padding: 22px 0;
 }
 
 .page-header__logo-image-tablet {
@@ -15,7 +21,7 @@
 @media (min-width: @tablet-width) {
   .page-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .page-header__logo-image {
@@ -24,10 +30,19 @@
 
   .page-header__logo-image-tablet {
     display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
   }
 
   .page-header__delivery {
-    display: block;
+    display: inline-block;
+    margin-bottom: -48px;
+
+    position: relative;
+    top: -4px;
+
+    text-align: right;
   }
 }
 
@@ -45,9 +60,5 @@
     position: absolute;
     left: 50%;
     margin-left: -56px;
-  }
-
-  .page-header__delivery {
-    align-self: flex-end;
   }
 }
