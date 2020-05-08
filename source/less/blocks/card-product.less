@@ -21,3 +21,36 @@
 
   margin-bottom: 28px;
 }
+
+@media (min-width: @tablet-width) {
+  .card-product__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-product__main {
+    height: 404px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .card-product__image {
+    order: 1;
+  }
+
+  .card-product__main .card-product__intro {
+    max-width: 282px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-product__header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

@@ -31,3 +31,22 @@
 
   margin-bottom: 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .catalog-list__item {
+    display: flex;
+    flex-direction: column;
+  }
+}

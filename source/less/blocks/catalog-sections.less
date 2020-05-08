@@ -33,3 +33,22 @@
 .catalog-sections__item--toys {
   background-color: @greeny-blue;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-sections {
+    margin-bottom: 55px;
+  }
+
+  .catalog-sections__list {
+    display: flex;
+  }
+
+  .catalog-sections__item {
+    flex-grow: 1;
+  }
+
+  .catalog-sections__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

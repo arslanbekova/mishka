@@ -25,3 +25,28 @@
 
   margin-top: 29px;
 }
+
+@media (min-width: @tablet-width) {
+  .video {
+    display: flex;
+    flex-direction: column;
+  }
+
+  video {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    display: block;
+  }
+
+  video {
+    float: left;
+  }
+
+  .video__title {
+    display: inline-block;
+  }
+}

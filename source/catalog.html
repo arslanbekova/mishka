@@ -4,37 +4,62 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин «Мишка»: каталог</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="page-header">
-    <a class="page-header__logo-link" href="index.html">
-      <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
+  <header class="page-header page-header--closed page-header--nojs">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo-link" href=" index.html"><svg class="page-header__logo-image" width="86" height="35"
+          alt="Логотип магазина «Мишка»">
         <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
-      </svg>
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle button" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+      </svg></a>
+      <a class="page-header__logo-link" href="index.html"><svg class="page-header__logo-image-tablet" width="112"
+          height="46" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-tablet"></use>
+      </svg></a>
+      <button class="page-header__toggle button" type="button"><span class="visually-hidden">Открыть
+          меню</span></button>
+      <nav class="navigation navigation--site">
+        <ul class="navigation__list site-list">
           <li class="site-list__item">
-            <a href="#">Каталог товаров</a>
+            <a>Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list user-list">
+      </nav>
+      <nav class="navigation navigation--user">
+        <ul class="navigation__list user-list">
           <li class="user-list__item">
-            <a href="#" class="user-list__search">Поиск по сайту</a>
+            <a href="#" class="user-list__link user-list__link--search">
+              <svg class="user-list__icon user-list__icon--search" width="17px" height="17px">
+                <use xlink:href="img/sprite-manual.svg#icon-search"></use>
+              </svg>
+              <span class="user-list__search-title">Поиск по сайту</span></a>
           </li>
           <li class="user-list__item">
-            <a href="#" class="user-list__cart">Корзина: пока пуста</a>
+            <a href="#" class="user-list__link user-list__link--cart">
+              <svg class="user-list__icon user-list__icon--cart" width="20px" height="19px">
+                <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+      <ul class="page-header__promo-list">
+        <li>
+          <a href="#">Новые поступления</a>
+        </li>
+        <li>
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="page-header__delivery">Бесплатная доставка по России</p>
+    </div>
   </header>
 
   <main class="page-main">
@@ -93,6 +118,9 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <svg class="page-footer__logo-image" width="102" height="34" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
+      </svg>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item"><a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a></li>
@@ -109,4 +137,20 @@
       </p>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.page-header');
+    var navToggle = document.querySelector('.page-header__toggle');
+
+    navMain.classList.remove('page-header--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('page-header--closed')) {
+        navMain.classList.remove('page-header--closed');
+        navMain.classList.add('page-header--opened');
+      } else {
+        navMain.classList.add('page-header--closed');
+        navMain.classList.remove('page-header--opened');
+      }
+    });
+  </script>
 </body>
