@@ -1,35 +1,136 @@
 .card-product {
-  margin-bottom: 36px;
+  margin-bottom: 68px;
+
+  position: relative;
+}
+
+.card-product__header,
+.card-product__main {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 320px;
+  margin: 0 auto 22px;
+  box-sizing: border-box;
+}
+
+.card-product__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-product__image-container {
+  order: 2;
+}
+
+.card-product__intro {
+  display: block;
+  order: 0;
+  max-width: 249px;
+  margin-bottom: 26px;
+
+  font-size: 15px;
 }
 
 .card-product__description {
-  margin-top: 24px;
+  order: 1;
+  width: 260px;
   margin-bottom: 28px;
 }
 
-.card-product__field {
-  padding-right: 30px;
+.card-product__description-wrapper {
+  display: flex;
+
+  border-bottom: 1px solid #dfdfdf;
+
+  padding-bottom: 11px;
+}
+
+.card-product__description-wrapper:not(:first-child) {
+  padding-top: 8px;
+}
+
+.card-product__description-wrapper p {
+  font-size: 15px;
+  line-height: 20px;
+  display: inline-block;
+}
+
+.card-product__option {
+  width: 38%;
 }
 
 .card-product__image {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
+}
+
+.card-product__price-wrapper {
+  order: 3;
 }
 
 .card-product__price {
   font-size: 17px;
   font-weight: bold;
 
-  margin-bottom: 28px;
+  margin-bottom: 27px;
+  padding-left: 68px;
+  padding-right: 68px;
+}
+
+.card-product__main .button {
+  order: 4;
+  width: 260px;
+}
+
+.card-product::after {
+  content: "";
+  transform: rotate(180deg);
+
+  background-image: url("./../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+
+  width: 320px;
+  height: 16px;
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  margin-left: -160px;
 }
 
 @media (min-width: @tablet-width) {
+  .card-product {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 119px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .card-product::after {
+    bottom: -70px;
+    width: 772px;
+    margin-left: -386px;
+  }
+
   .card-product__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    width: 669px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 50px;
   }
 
   .card-product__main {
-    height: 404px;
+    height: 410px;
+    width: 669px;
+    margin: 0 auto;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
@@ -37,20 +138,109 @@
     align-items: flex-start;
   }
 
-  .card-product__image {
-    order: 1;
+  .card-product__image-container {
+    order: 6;
+    align-self: flex-end;
+    padding-top: 6px;
   }
 
-  .card-product__main .card-product__intro {
-    max-width: 282px;
+  .card-product__image {
+    width: 333px;
+    height: 404px;
+    margin: 0;
+  }
+
+  .card-product__intro {
+    max-width: 292px;
+    margin-bottom: 44px;
+
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .card-product__description {
+    width: 292px;
+    margin-bottom: 55px;
+  }
+
+  .card-product__option {
+    width: 34%;
+  }
+
+  .card-product__price-wrapper {
+    width: 292px;
+    margin-bottom: 33px;
+  }
+
+  .card-product__price {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-width: 146px;
+  }
+
+  .card-product__main .button {
+    width: 292px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .card-product {
+    margin-bottom: 155px;
+    padding: 0;
+  }
+
+  .card-product::after {
+    height: 21px;
+    width: 1050px;
+    bottom: -94px;
+    margin-left: -525px;
+  }
+
+  .card-product__wrapper {
+    width: 1150px;
+    padding-left: 225px;
+    margin: 0 auto;
+    position: relative;
+  }
+
   .card-product__header {
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    position: absolute;
+    margin: 0;
+    top: 52px;
+    left: 77px;
+    justify-content: space-between;
+    min-width: 647px;
+  }
+
+  .card-product__main {
+    padding-right: 175px;
+    height: 636px;
+    width: 1050px;
+    justify-content: space-between;
+  }
+
+  .card-product__intro {
+    margin-top: 157px;
+    margin-bottom: 24px;
+  }
+
+  .card-product__image-container {
+    padding: 0;
+  }
+
+  .card-product__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .card-product__description {
+    margin-bottom: 75px;
+  }
+
+  .card-product__price-wrapper {
+    margin: 0;
   }
 }

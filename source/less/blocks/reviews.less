@@ -1,7 +1,46 @@
 .reviews {
-  margin-bottom: 44px;
+  margin-bottom: 86px;
 
   position: relative;
+}
+
+.reviews::after {
+  content: "";
+  transform: rotate(180deg);
+
+  width: 320px;
+  height: 16px;
+  margin: 0 auto;
+
+  position: absolute;
+  bottom: -51px;
+  left: 50%;
+  margin-left: -160px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position-x: center;
+}
+
+.reviews__wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.reviews__item {
+  .zero-indent;
+  margin-top: 24px;
+  margin-bottom: 27px;
+
+  line-height: 2;
+}
+
+.reviews__item p {
+  margin-bottom: 22px;
 }
 
 .reviews__author-name {
@@ -18,37 +57,191 @@
   font-style: normal;
 }
 
-.reviews__write {
-  font-size: 18px;
-  line-height: 20px;
+.reviews__controllers {
+  display: flex;
+  margin-bottom: 38px;
 }
 
+.reviews__prev,
+.reviews__next {
+  flex-grow: 1;
+}
+
+.reviews__prev.button,
+.reviews__next.button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 1px solid #ececec;
+}
+
+.reviews__next.button {
+  border-left: none;
+}
+
+.reviews__next .reviews__icon {
+  transform: rotate(180deg);
+}
+
+.reviews__write {
+  font-size: 18px;
+}
+
+.reviews__prev.button:hover,
+.reviews__next.button:hover,
+.reviews__prev.button:focus,
+.reviews__next.button:focus {
+  background-color: transparent;
+}
+
+.reviews__prev.button:hover .reviews__icon,
+.reviews__next.button:hover .reviews__icon,
+.reviews__prev.button:focus .reviews__icon,
+.reviews__next.button:focus .reviews__icon {
+  opacity: 0.6;
+}
+
+.reviews__prev.button:active .reviews__icon,
+.reviews__next.button:active .reviews__icon {
+  opacity: 0.3;
+}
 
 @media (min-width: @tablet-width) {
-  .reviews__author-name {
-    display: block;
+  .reviews {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 165px;
+
+    display: flex;
+    flex-direction: column;
   }
 
-  .reviews__prev,
-  .reviews__next,
-  .reviews__write {
+  .reviews::after {
+    width: 772px;
+    height: 16px;
+    margin: 0 auto;
+    margin-left: -386px;
+    bottom: -103px;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+    z-index: 2;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 772px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .reviews__wrapper h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .reviews__wrapper::before {
+    content: "";
+    width: 350px;
+    height: 457px;
+
     position: absolute;
+    z-index: 1;
+    left: 2px;
+    bottom: -19px;
+
+    background-image: url("./../img/review@1x.jpg");
   }
 
-  .reviews__prev {
-    bottom: 0;
-    right: 240px;
-  }
-
-  .reviews__next {
-    bottom: 0;
-    right: 0;
-  }
-
-  .reviews__write {
-    top: 0;
-    right: 0;
+  .reviews__item {
+    margin-top: 47px;
 
     font-size: 17px;
+    line-height: 30px;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .reviews__item p {
+    margin-bottom: 56px;
+  }
+
+  .reviews__author-name {
+    display: block;
+    font-size: 18px;
+  }
+
+  .reviews__controllers {
+    position: absolute;
+    right: 55px;
+    bottom: 43px;
+    z-index: 3;
+    margin: 0;
+    width: 170px;
+    height: 26px;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+
+  .reviews__prev.button,
+  .reviews__next.button {
+    padding: 0;
+    border: none;
+    position: relative;
+    right: 0;
+    flex-grow: 0;
+  }
+
+  .reviews__write {
+    position: absolute;
+    top: 2px;
+    right: 52px;
+    z-index: 3;
+
+    font-size: 17px;
+
+    width: 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 230px;
+  }
+
+  .reviews__wrapper::before {
+    bottom: -68px;
+  }
+
+  .reviews::after {
+    height: 21px;
+    bottom: -158px;
+    width: 1050px;
+    margin-left: -525px;
+  }
+
+  .reviews__wrapper {
+    width: 1050px;
+    padding-left: 175px;
+    margin: 0 auto;
+  }
+
+  .reviews__item {
+    width: 770px;
+  }
+
+  .reviews__item p {
+    margin-bottom: 37px;
+  }
+
+  .reviews__controllers {
+    right: 0;
+  }
+
+  .reviews__write {
+    top: 8px;
+    right: 0;
   }
 }

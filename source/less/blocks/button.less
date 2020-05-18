@@ -1,19 +1,46 @@
 .button {
   color: @black-light;
-
+  text-align: center;
   font-size: 17px;
   font-weight: bold;
   line-height: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 
-  padding: 10px 20px;
+  width: 100%;
+  padding: 16px 20px;
+  display: block;
+  box-sizing: border-box;
 
   background-color: transparent;
 
   border-color: @black-light;
+  border-width: 2px;
+  border-style: solid;
+
+  transition: 0.2s;
 }
 
-.button--order {
-  line-height: 20px;
-  margin-bottom: 36px;
+.button:hover,
+.button:focus {
+  background-color: @black-light;
+  color: @white-base;
+}
+
+.button:active {
+  color: @white-base-active;
+}
+
+.button--modal {
+  background-color: @seafoam-blue;
+  color: @white-base;
+  border: none;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .button--order {
+    width: 230px;
+  }
 }

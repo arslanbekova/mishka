@@ -4,4 +4,27 @@
   font-size: 19px;
   font-weight: bold;
   line-height: 18px;
+
+  width: 186px;
+  margin: 0 auto;
+}
+
+.copyright__link {
+  display: inline-block;
+  margin-left: 26px;
+  vertical-align: middle;
+}
+
+.copyright:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin: 0;
+  }
+
+  .copyright__link {
+    vertical-align: sub;
+  }
 }

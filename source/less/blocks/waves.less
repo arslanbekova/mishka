@@ -1,0 +1,20 @@
+@media (min-width: @tablet-width) {
+  .waves::after {
+    content: "";
+    background-image: url("./../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 100%;
+    height: 24px;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .waves::after {
+    height: 34px;
+  }
+}

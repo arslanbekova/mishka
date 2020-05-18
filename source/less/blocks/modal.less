@@ -1,0 +1,99 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -168px;
+  margin-left: -161px;
+  z-index: 10;
+
+  background-color: @white-base;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: solid 1px #c6c6c6;
+}
+
+.modal__form {
+  width: 320px;
+  height: 336px;
+  margin: 0 auto;
+  padding: 31px 30px 46px 30px;
+  box-sizing: border-box;
+}
+
+.modal__title {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 26px;
+}
+
+.modal__list {
+  display: flex;
+  width: 100%;
+  min-height: 52px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.modal__list label {
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+
+  padding: 17px 30px;
+
+  width: 82px;
+  height: 52px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal__input + label::before {
+  content: "";
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  width: 82px;
+  height: 52px;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+}
+
+.modal__input {
+  &:focus + label::before,
+  &:hover + label::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:checked + label::before,
+  &:active + label::before {
+    border-color: @seafoam-blue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    margin-left: -283px;
+  }
+
+  .modal__form {
+    width: 566px;
+    padding: 34px 108px 36px 104px;
+  }
+
+  .modal__title {
+    font-size: 17px;
+  }
+
+  .modal__list label {
+    width: 112px;
+  }
+
+  .modal__input + label::before {
+    width: 112px;
+  }
+}
