@@ -4,35 +4,60 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин «Мишка»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="page-header">
-    <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
-      <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
-    </svg>
-    <nav class="main-nav">
-        <button class="main-nav__toggle button" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+  <div class="site-wrapper">
+  <header class="page-header page-header--index page-header--closed page-header--nojs">
+    <div class="page-header__wrapper">
+      <svg class="page-header__logo-image" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka"></use>
+      </svg>
+      <svg class="page-header__logo-image-tablet" width="112" height="46" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-tablet"></use>
+      </svg>
+      <button class="page-header__toggle button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="navigation navigation--site">
+          <ul class="navigation__list site-list">
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+      </nav>
+      <nav class="navigation navigation--user">
+        <ul class="navigation__list user-list">
+          <li class="user-list__item">
+            <a href="#" class="user-list__link user-list__link--search">
+              <svg class="user-list__icon user-list__icon--search" width="17px" height="17px">
+                <use xlink:href="img/sprite-manual.svg#icon-search"></use>
+              </svg>
+              <span class="user-list__search-title">Поиск по сайту</span></a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+          <li class="user-list__item">
+            <a href="#" class="user-list__link user-list__link--cart">
+              <svg class="user-list__icon user-list__icon--cart" width="20px" height="19px">
+                <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста</a>
           </li>
         </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a href="#" class="user-list__search">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__cart">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+      <ul class="page-header__promo-list">
+        <li>
+          <a href="#">Новые поступления</a>
+        </li>
+        <li>
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="page-header__delivery">Бесплатная доставка по России</p>
+    </div>
   </header>
 
   <main class="page-main page-main--index">
@@ -49,31 +74,34 @@
         </li>
       </ul>
     </section>
-
     <section class="card-product">
-      <h2 class="visually-hidden h2">Карточка товара</h2>
-      <h3 class="сard-product__title h2">Вязаные корзинки</h3>
-      <h3 class="h3 h3--product-of-week">Товар недели</h3>
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
-        размерах.</p>
-      <table class="card-product__description">
-        <tr>
-          <td class="card-product__field">Цвет:</td>
-          <td class="сard-product__value">"Тиффани"/серый</td>
-        </tr>
-        <tr>
-          <td class="card-product__field">Диаметр:</td>
-          <td class="сard-product__value">25 см</td>
-        </tr>
-        <tr>
-          <td class="card-product__field">Высота:</td>
-          <td class="сard-product__value">15 см</td>
-        </tr>
-      </table>
-      <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" width="260px" height="315px"
-        alt="Вязаные корзинки мятно-серого цвета">
-      <p class="card-product__price">Цена: 990руб.</p>
-      <button class="button button--order" type="button">Заказать</button>
+      <div class="card-product__header">
+        <h2 class="visually-hidden h2">Карточка товара</h2>
+        <h3 class="сard-product__title h2">Вязаные корзинки</h3>
+        <h3 class="h3 h3--product-of-week">Товар недели</h3>
+      </div>
+      <div class="card-product__main">
+        <p class="card-product__intro">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
+          размерах.</p>
+        <table class="card-product__description">
+          <tr>
+            <td class="card-product__field">Цвет:</td>
+            <td class="сard-product__value">"Тиффани"/серый</td>
+          </tr>
+          <tr>
+            <td class="card-product__field">Диаметр:</td>
+            <td class="сard-product__value">25 см</td>
+          </tr>
+          <tr>
+            <td class="card-product__field">Высота:</td>
+            <td class="сard-product__value">15 см</td>
+          </tr>
+        </table>
+        <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" width="260px" height="315px"
+          alt="Вязаные корзинки мятно-серого цвета">
+        <p class="card-product__price">Цена: 990руб.</p>
+        <button class="button button--order" type="button">Заказать</button>
+      </div>
     </section>
 
     <section class="about-us">
@@ -113,26 +141,38 @@
       </blockquote>
       <button class="reviews__prev button" type="button">Предыдущий отзыв</button>
       <button class="reviews__next button" type="button">Следующий отзыв</button>
-      <a class="button button--write" href="#">Написать</a>
+      <a class="reviews__write button" href="#">Написать</a>
     </section>
 
     <section class="contacts">
       <h2 class="h2 h2--contacts">Контакты</h2>
       <div class="contacts__wrapper">
-        <p>e-mail:<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
-        <p>адрес:<span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></p>
+        <p class="contacts__email-wrapper">e-mail:<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
+        <div class="contacts__address-wrapper">
+          <p>адрес:</p>
+          <div class="contacts__address">
+            <p>г. Санкт-Петербург,</p>
+            <p>ул. Большая Конюшенная,</p>
+            <p>д. 19/8, офис 101</p>
+          </div>
+        </div>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003044!2d30.320858716036227!3d59.93871916905428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sid!4v1585645489234!5m2!1sru!2sid"
-        width="100%" height="457px" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0">
-      </iframe>
-      <a class="button button--write" href="#">Напишите нам</a>
+      <div class="contacts__map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003044!2d30.320858716036227!3d59.93871916905428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sid!4v1585645489234!5m2!1sru!2sid"
+          width="100%" height="457px" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0">
+        </iframe>
+        </div>
+      <a class="contacts__write button" href="#">Напишите нам</a>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <svg class="page-footer__logo-image" width="102" height="34" alt="Логотип магазина «Мишка»">
+        <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
+      </svg>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item"><a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a></li>
@@ -149,6 +189,23 @@
       </p>
     </div>
   </footer>
+  </div>
+  <script>
+    var navMain = document.querySelector('.page-header');
+    var navToggle = document.querySelector('.page-header__toggle');
+
+    navMain.classList.remove('page-header--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('page-header--closed')) {
+        navMain.classList.remove('page-header--closed');
+        navMain.classList.add('page-header--opened');
+      } else {
+        navMain.classList.add('page-header--closed');
+        navMain.classList.remove('page-header--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

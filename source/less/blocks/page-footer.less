@@ -1,3 +1,22 @@
 .page-footer {
   background-color: @footer-bg;
 }
+
+.page-footer__logo-image {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 51px 50px 58px 50px;
+  }
+
+  .page-footer__logo-image {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}

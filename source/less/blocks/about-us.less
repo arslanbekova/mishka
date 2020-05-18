@@ -13,3 +13,24 @@
 
   .zero-indent;
 }
+
+@media (min-width: @tablet-width) {
+  .about-us__list {
+    height: 267px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+  }
+
+  .about-us__item {
+    max-width: 295px;
+    margin-bottom: 45px;
+  }
+
+  .about-us__item p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}

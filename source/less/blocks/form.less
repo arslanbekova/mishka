@@ -42,3 +42,29 @@
 .form__required {
   margin-bottom: 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .form__field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__title {
+    margin-right: 130px;
+  }
+
+  .form label {
+    line-height: 19px;
+    font-size: 19px;
+  }
+
+  .form__input[type="checkbox"] {
+    margin-right: 28px;
+  }
+
+  .form__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
