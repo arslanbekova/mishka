@@ -79,7 +79,7 @@
             </a>
             <p class="catalog-list__item-description">Рост 30 см, вес 200 г</p>
             <p class="catalog-list__item-price">1 200 руб.
-              <svg class="catalog-list__icon" width="20px" height="19px">
+              <svg class="catalog-list__icon modal__link" width="20px" height="19px">
                 <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
               </svg>
             </p>
@@ -97,7 +97,7 @@
             </a>
             <p class="catalog-list__item-description">Диаметр 15 см, высота 10 см</p>
             <p class="catalog-list__item-price">690 руб.
-              <svg class="catalog-list__icon" width="20px" height="19px">
+              <svg class="catalog-list__icon modal__link" width="20px" height="19px">
                 <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
               </svg>
             </p>
@@ -115,7 +115,7 @@
             </a>
             <p class="catalog-list__item-description">Диаметр 30 см, высота 30 см</p>
             <p class="catalog-list__item-price">1 500 руб.
-              <svg class="catalog-list__icon" width="20px" height="19px">
+              <svg class="catalog-list__icon modal__link" width="20px" height="19px">
                 <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
               </svg>
             </p>
@@ -183,7 +183,7 @@
       </p>
     </div>
   </footer>
-  <section class="modal modal--show">
+  <section class="modal">
     <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
       <h1 class="h1 h1--modal">Добавить в корзину</h1>
       <legend class="modal__title">Выберите размер:</legend>
@@ -218,6 +218,16 @@
         navMain.classList.add('page-header--closed');
         navMain.classList.remove('page-header--opened');
       }
+    });
+  </script>
+  <script>
+    var link = document.querySelector(".modal__link");
+    var modal = document.querySelector(".modal");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("modal--hide");
+      modal.classList.add("modal--show");
     });
   </script>
 </body>

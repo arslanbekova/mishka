@@ -116,7 +116,7 @@
           <div class="card-product__price-wrapper">
             <p class="card-product__price">Цена: 990 руб.</p>
           </div>
-          <button class="button button--order" type="button">Заказать</button>
+          <button class="button button--order modal__link" type="button">Заказать</button>
         </div>
       </div>
     </section>
@@ -243,7 +243,7 @@
       </p>
     </div>
   </footer>
-  <section class="modal modal--show">
+  <section class="modal">
     <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
       <h1 class="h1 h1--modal">Добавить в корзину</h1>
       <legend class="modal__title">Выберите размер:</legend>
@@ -278,6 +278,16 @@
         navMain.classList.add('page-header--closed');
         navMain.classList.remove('page-header--opened');
       }
+    });
+  </script>
+  <script>
+    var link = document.querySelector(".modal__link");
+    var modal = document.querySelector(".modal");
+
+    link.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      modal.classList.remove("modal--hide");
+      modal.classList.add("modal--show");
     });
   </script>
 </body>
