@@ -1,5 +1,10 @@
 .about-us {
-  margin-bottom: 61px;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .about-us__list {
@@ -12,11 +17,71 @@
   list-style: none;
 
   .zero-indent;
+  margin-top: 31px;
+}
+
+.about-us__item {
+  padding-top: 56px;
+  margin-bottom: 27px;
+}
+
+.about-us__item--ecology {
+  background-image: url("./../img/icon-feature-flower.svg");
+  background-repeat: no-repeat;
+  background-position-x: 9px;
+
+  width: 175px;
+}
+
+.about-us__item--style {
+  background-image: url("./../img/icon-feature-money.svg");
+  background-repeat: no-repeat;
+  background-position-y: 3px;
+
+  width: 200px;
+}
+
+.about-us__item--like {
+  background-image: url("./../img/icon-feature-heart.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+
+  width: 181px;
+}
+
+.about-us__item--handmade {
+  background-image: url("./../img/icon-feature-ball.svg");
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+
+  width: 211px;
+}
+
+.about-us__item--support {
+  background-image: url("./../img/icon-feature-rocket.svg");
+  background-repeat: no-repeat;
+  background-position: -1px 5px;
+}
+
+.about-us__item--gift {
+  background-image: url("./../img/icon-feature-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+
+  width: 198px;
 }
 
 @media (min-width: @tablet-width) {
+  .about-us {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 772px;
+    box-sizing: border-box;
+    margin: 0 auto 63px;
+  }
+
   .about-us__list {
-    height: 267px;
+    height: 505px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -25,12 +90,62 @@
   }
 
   .about-us__item {
-    max-width: 295px;
-    margin-bottom: 45px;
+    width: 50%;
+    padding-top: 54px;
+    margin-bottom: 57px;
+    margin-top: 0;
   }
 
   .about-us__item p {
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .about-us__item--ecology p {
+    width: 205px;
+  }
+
+  .about-us__item--style {
+    background-position-y: 0;
+  }
+
+  .about-us__item--style p {
+    width: 235px;
+  }
+
+  .about-us__item--like {
+    background-position: 10px 5px;
+  }
+
+  .about-us__item--like p {
+    width: 212px;
+  }
+
+  .about-us__item--handmade {
+    background-position: 4px 2px;
+  }
+
+  .about-us__item--handmade p {
+    width: 248px;
+  }
+
+  .about-us__item--support {
+    background-position: -1px 3px;
+  }
+
+  .about-us__item--gift {
+    background-position: 4px 0;
+  }
+
+  .about-us__item--gift p {
+    width: 233px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 1150px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }

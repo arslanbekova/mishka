@@ -1,3 +1,31 @@
+.input-list .form__option {
+  margin-bottom: 22px;
+}
+
 .input-list label {
-  display: inline-block;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .input-list {
+    display: block;
+    width: 500px;
+  }
+
+  .input-list .form__option {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+
+  .input-list label {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input-list {
+    width: 700px;
+    margin-left: 8px;
+  }
 }

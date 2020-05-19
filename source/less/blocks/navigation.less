@@ -15,12 +15,21 @@
   list-style: none;
 }
 
+.navigation__list a:hover,
+.navigation__list a:focus {
+  color: @black-base-hover;
+}
+
+.navigation__list a:active {
+  color: @black-base-active;
+}
+
 @media (max-width: @mobile-width-only) {
   .navigation__list a {
     position: relative;
     display: block;
-    padding-top: 30px;
-    padding-bottom: 24px;
+    padding-top: 27px;
+    padding-bottom: 28px;
 
     box-shadow: 0 1px 0 0 #ececec,
       inset 0 1px 0 0 #ececec;
