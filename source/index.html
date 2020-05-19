@@ -94,9 +94,11 @@
           <p class="card-product__intro">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
             размерах.</p>
           <picture class="card-product__image-container">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" width="260px" height="315px"
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              width="260px" height="315px"
             alt="Вязаные корзинки мятно-серого цвета">
           </picture>
           <div class="card-product__description">
@@ -203,7 +205,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <svg class="page-footer__logo-image page-footer__icon" width="102" height="34" alt="Логотип магазина «Мишка»">
+      <svg class="page-footer__logo-image" width="102" height="34" alt="Логотип магазина «Мишка»">
         <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
       </svg>
       <div class="page-footer__social social">
