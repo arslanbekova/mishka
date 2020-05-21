@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Интернет-магазин «Мишка»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -31,15 +30,17 @@
       <nav class="navigation navigation--user">
         <ul class="navigation__list user-list">
           <li class="user-list__item">
-            <a href="#" class="user-list__link user-list__link--search">
-              <svg class="user-list__icon user-list__icon--search" width="17px" height="17px">
+            <a href="#" class="user-list__link user-list__link--search" aria-label="Поиск по сайту">
+              <svg class="user-list__icon user-list__icon--search" width="17" height="17" role="img" aria-label="Поиск по сайту" focusable="true">
                 <use xlink:href="img/sprite-manual.svg#icon-search"></use>
               </svg>
               <span class="user-list__search-title">Поиск по сайту</span></a>
           </li>
           <li class="user-list__item">
-            <a href="#" class="user-list__link user-list__link--cart">
-              <svg class="user-list__icon user-list__icon--cart" width="20px" height="19px">
+            <a href="#" class="user-list__link user-list__link--cart" aria-label="Корзина товаров">
+              <svg class="user-list__icon user-list__icon--cart" width="20" height="19" role="img"
+                aria-label="Корзина товаров"
+                focusable="true">
                 <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
               </svg>
               Корзина: пока пуста</a>
@@ -68,7 +69,7 @@
           <a href="#" class="catalog-sections__link">
             <span class="catalog-sections__title">Предметы интерьера</span>
             <svg class="catalog-sections__icon catalog-sections__icon--interior" width="40" height="62"
-              alt="иконка настольной лампы">
+              aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-interior"></use>
             </svg>
           </a>
@@ -76,7 +77,8 @@
         <li class="catalog-sections__item catalog-sections__item--toys">
           <a href="#" class="catalog-sections__link">
             <span class="catalog-sections__title">Детские игрушки</span>
-            <svg class="catalog-sections__icon catalog-sections__icon--toy" width="60" height="60" alt="иконка игрушки">
+            <svg class="catalog-sections__icon catalog-sections__icon--toy" width="60" height="60"
+              aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-toy"></use>
             </svg>
           </a>
@@ -94,9 +96,16 @@
           <p class="card-product__intro">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
             размерах.</p>
           <picture class="card-product__image-container">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" width="260px" height="315px"
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp"  media="(min-width: 772px)"
+                srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              width="260" height="315"
             alt="Вязаные корзинки мятно-серого цвета">
           </picture>
           <div class="card-product__description">
@@ -160,13 +169,13 @@
         <div class="reviews__controllers">
           <button class="reviews__prev button" type="button">
             <span class="visually-hidden">Предыдущий отзыв</span>
-            <svg class="reviews__icon" width="50" height="26">
+            <svg class="reviews__icon" width="50" height="26" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#left-arrow"></use>
             </svg>
           </button>
           <button class="reviews__next button" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
-            <svg class="reviews__icon" width="50" height="26">
+            <svg class="reviews__icon" width="50" height="26" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#left-arrow"></use>
             </svg>
           </button>
@@ -193,7 +202,7 @@
       <div class="contacts__map-wrapper">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003044!2d30.320858716036227!3d59.93871916905428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sid!4v1585645489234!5m2!1sru!2sid"
-            width="100%" height="457px" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+            style="border: 0; width: 100%; height: 457px" allowfullscreen="" aria-hidden="false"
             tabindex="0">
           </iframe>
       </div>
@@ -203,15 +212,16 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <svg class="page-footer__logo-image page-footer__icon" width="102" height="34" alt="Логотип магазина «Мишка»">
+      <svg class="page-footer__logo-image" width="102" height="34" role="img" aria-label="Логотип магазина «Мишка»"
+        focusable="true">
         <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
       </svg>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Мы вИнстаграме</span>
-            <svg class="social__icon page-footer__icon" width="22px" height="21px">
+            <span class="visually-hidden">Мы в Инстаграме</span>
+            <svg class="social__icon page-footer__icon" width="22" height="21" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-instagram"></use>
             </svg>
           </a>
@@ -219,7 +229,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg class="social__icon page-footer__icon" width="15px" height="28px">
+              <svg class="social__icon page-footer__icon" width="15" height="28" aria-hidden="true">
                 <use xlink:href="img/sprite-manual.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -227,7 +237,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
               <span class="visually-hidden">Мы в Твиттере</span>
-              <svg class="social__icon page-footer__icon" width="24px" height="20px">
+              <svg class="social__icon page-footer__icon" width="24" height="20" aria-hidden="true">
                 <use xlink:href="img/sprite-manual.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -235,8 +245,10 @@
         </ul>
       </div>
       <p class="copyright">Разработано
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright-image page-footer__icon" width="27px" height="34px" alt="Логотип компании-создателя сайта">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Логотип компании-создателя сайта">
+          <svg class="copyright-image page-footer__icon" width="27" height="34" role="img"
+            aria-label="Логотип компании-создателя сайта" focusable="true">
             <use xlink:href="img/sprite-manual.svg#logo-academy"></use>
           </svg>
         </a>
@@ -246,7 +258,7 @@
   <section class="modal">
     <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
       <h1 class="h1 h1--modal">Добавить в корзину</h1>
-      <legend class="modal__title">Выберите размер:</legend>
+      <p class="modal__title">Выберите размер:</p>
       <ul class="modal__list">
             <li>
               <input class="visually-hidden modal__input" type="checkbox" id="s-size" name="s-size" checked>
@@ -264,32 +276,8 @@
       <button class="button button--modal" type="submit">Добавить</button>
     </form>
   </section>
-  <script>
-    var navMain = document.querySelector('.page-header');
-    var navToggle = document.querySelector('.page-header__toggle');
-
-    navMain.classList.remove('page-header--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('page-header--closed')) {
-        navMain.classList.remove('page-header--closed');
-        navMain.classList.add('page-header--opened');
-      } else {
-        navMain.classList.add('page-header--closed');
-        navMain.classList.remove('page-header--opened');
-      }
-    });
-  </script>
-  <script>
-    var link = document.querySelector(".modal__link");
-    var modal = document.querySelector(".modal");
-
-    link.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modal.classList.remove("modal--hide");
-      modal.classList.add("modal--show");
-    });
-  </script>
+  <script src="./js/svg4everybody.js"></script>
+  <script>svg4everybody();</script>
 </body>
 
 </html>

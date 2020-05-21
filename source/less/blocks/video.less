@@ -25,12 +25,19 @@
 
 .video__container {
   background-image: url("./../img/video-mobile@1x.jpg");
+  background-color: @grey;
   background-repeat: no-repeat;
   background-position: center;
   width: 260px;
   height: 150px;
   position: absolute;
   top: 95px;
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("./../img/video-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .video__button {
@@ -90,6 +97,12 @@
     height: 455px;
     position: relative;
     top: 0;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("./../img/video-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .video {
@@ -136,6 +149,12 @@
     background-position: center;
     width: 682px;
     height: 455px;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("./../img/video-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .video {

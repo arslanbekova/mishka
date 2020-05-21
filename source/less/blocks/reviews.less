@@ -150,6 +150,13 @@
     bottom: -19px;
 
     background-image: url("./../img/review@1x.jpg");
+    background-color: @grey;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("./../img/review@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .reviews__item {
