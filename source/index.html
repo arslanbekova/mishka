@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eng">
 
 <head>
   <meta charset="utf-8">
-  <title>Интернет-магазин «Мишка»</title>
+  <title>Internet store «Mishka»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -16,60 +16,61 @@
       <picture class="page-header__logo-container">
         <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 772px)" srcset="img/logo-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Store logo «Mishka»">
       </picture>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Open menu</span></button>
       <nav class="navigation navigation--site">
           <ul class="navigation__list site-list">
             <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a href="catalog.html">Сatalogue of goods</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a href="form.html">Сustom-made knitting</a>
             </li>
           </ul>
       </nav>
       <nav class="navigation navigation--user">
         <ul class="navigation__list user-list">
           <li class="user-list__item">
-            <a href="#" class="user-list__link user-list__link--search" aria-label="Поиск по сайту">
-              <svg class="user-list__icon user-list__icon--search" width="17" height="17" role="img" aria-label="Поиск по сайту" focusable="true">
+            <a href="#" class="user-list__link user-list__link--search" aria-label="site search">
+              <svg class="user-list__icon user-list__icon--search" width="17" height="17" role="img"
+                aria-label="site search" focusable="true">
                 <use xlink:href="img/sprite-manual.svg#icon-search"></use>
               </svg>
-              <span class="user-list__search-title">Поиск по сайту</span></a>
+              <span class="user-list__search-title">Site search</span></a>
           </li>
           <li class="user-list__item">
-            <a href="#" class="user-list__link user-list__link--cart" aria-label="Корзина товаров">
+            <a href="#" class="user-list__link user-list__link--cart" aria-label="basket of goods">
               <svg class="user-list__icon user-list__icon--cart" width="20" height="19" role="img"
-                aria-label="Корзина товаров"
+                aria-label="basket of goods"
                 focusable="true">
                 <use xlink:href="img/sprite-manual.svg#icon-cart"></use>
               </svg>
-              Корзина: пока пуста</a>
+              Basket: nothing so far</a>
           </li>
         </ul>
       </nav>
       <ul class="page-header__promo-list">
         <li>
-          <a href="#">Новые поступления</a>
+          <a href="#">New arrivals</a>
         </li>
         <li>
-          <a href="#">Распродажа</a>
+          <a href="#">Sale</a>
         </li>
       </ul>
-      <p class="page-header__delivery">Бесплатная доставка по России</p>
+      <p class="page-header__delivery">Free delivery</p>
     </div>
   </header>
 
   <main class="page-main page-main--index">
-    <h1 class="h1 h1--index">Милые штуки <span class="h1__line">ручной</span> работы для дома</h1>
+    <h1 class="h1 h1--index">Nice <span class="h1__line">handmade</span> things for home</h1>
 
     <section class="catalog-sections">
-      <h2 class="visually-hidden h2">Разделы каталога товаров</h2>
+      <h2 class="visually-hidden h2">sections catalogue of goods</h2>
       <ul class="catalog-sections__list">
         <li class="catalog-sections__item catalog-sections__item--interior-items">
           <a href="#" class="catalog-sections__link">
-            <span class="catalog-sections__title">Предметы интерьера</span>
+            <span class="catalog-sections__title">Interior decorations</span>
             <svg class="catalog-sections__icon catalog-sections__icon--interior" width="40" height="62"
               aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-interior"></use>
@@ -78,7 +79,7 @@
         </li>
         <li class="catalog-sections__item catalog-sections__item--toys">
           <a href="#" class="catalog-sections__link">
-            <span class="catalog-sections__title">Детские игрушки</span>
+            <span class="catalog-sections__title">Сhildren's toys</span>
             <svg class="catalog-sections__icon catalog-sections__icon--toy" width="60" height="60"
               aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-toy"></use>
@@ -90,13 +91,13 @@
     <section class="card-product">
       <div class="card-product__wrapper">
         <div class="card-product__header">
-          <h2 class="visually-hidden h2">Карточка товара</h2>
-          <h3 class="сard-product__title h2">Вязаные корзинки</h3>
-          <h3 class="h3 h3--product-of-week">Товар недели</h3>
+          <h2 class="visually-hidden h2">Goods card</h2>
+          <h3 class="сard-product__title h2">Pretty knit basket</h3>
+          <h3 class="h3 h3--product-of-week">Product of the week</h3>
         </div>
         <div class="card-product__main">
-          <p class="card-product__intro">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
-            размерах.</p>
+          <p class="card-product__intro">Ecologically pure yarn, handmade. Available in six colors and three
+            sizes.</p>
           <picture class="card-product__image-container">
             <source type="image/webp" media="(min-width: 1150px)"
               srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -108,95 +109,95 @@
             <source media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="card-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
               width="260" height="315"
-            alt="Вязаные корзинки мятно-серого цвета">
+            alt="knit basket minty and grey color">
           </picture>
           <div class="card-product__description">
             <div class="card-product__description-wrapper">
-              <p class="card-product__option">Цвет:</p>
-              <p class="сard-product__value">«Тиффани»/серый</p>
+              <p class="card-product__option">Color:</p>
+              <p class="сard-product__value">«Tiffany»/grey</p>
             </div>
             <div class="card-product__description-wrapper">
-              <p class="card-product__option">Диаметр:</p>
-              <p class="сard-product__value">25 см</p>
+              <p class="card-product__option">Diameter:</p>
+              <p class="сard-product__value">25 cm</p>
             </div>
             <div class="card-product__description-wrapper">
-              <p class="card-product__option">Высота:</p>
-              <p class="сard-product__value">15 см</p>
+              <p class="card-product__option">Height:</p>
+              <p class="сard-product__value">15 cm</p>
             </div>
           </div>
           <div class="card-product__price-wrapper">
-            <p class="card-product__price">Цена: 990 руб.</p>
+            <p class="card-product__price">Price: 15 USD</p>
           </div>
-          <button class="button button--order modal__link" type="button">Заказать</button>
+          <button class="button button--order modal__link" type="button">Make order</button>
         </div>
       </div>
     </section>
 
     <section class="about-us">
-      <h2 class="h2">Коротко о нас:</h2>
+      <h2 class="h2">Shortly about us:</h2>
       <ul class="about-us__list">
         <li class="about-us__item about-us__item--ecology">
-          <p>Экологически чистые материалы</p>
+          <p>Ecologically pure materials</p>
         </li>
         <li class="about-us__item about-us__item--style">
-          <p>Скандинавский стиль по российской цене</p>
+          <p>Scandy style at a good price</p>
         </li>
         <li class="about-us__item about-us__item--like">
-          <p>Увеличивает лайки на фотографиях</p>
+          <p>Increase likes in the photos</p>
         </li>
         <li class="about-us__item about-us__item--handmade">
-          <p>Связано вручную с любовью и умилением</p>
+          <p>Handwork with love and warmth</p>
         </li>
         <li class="about-us__item about-us__item--support">
-          <p>Поддержка отечественного производителя</p>
+          <p>Support and collaboration with domestic producer</p>
         </li>
         <li class="about-us__item about-us__item--gift">
-          <p>Поставляется в подарочной упаковке</p>
+          <p>Сomes in gift wrap</p>
         </li>
       </ul>
     </section>
 
     <section class="reviews">
       <div class="reviews__wrapper">
-        <h2 class="h2">Отзывы</h2>
+        <h2 class="h2">Reviews</h2>
         <blockquote class="reviews__item">
           <p>
-            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В
-            отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-            больше лайков!
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
           </p>
-          <cite class="reviews__author-name">Анастасия Красильникова</cite>
+          <cite class="reviews__author-name">Kristina Beglova</cite>
           <cite class="reviews__author-email">@misssssiskras</cite>
         </blockquote>
         <div class="reviews__controllers">
           <button class="reviews__prev button" type="button">
-            <span class="visually-hidden">Предыдущий отзыв</span>
+            <span class="visually-hidden">Previous review</span>
             <svg class="reviews__icon" width="50" height="26" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#left-arrow"></use>
             </svg>
           </button>
           <button class="reviews__next button" type="button">
-            <span class="visually-hidden">Следующий отзыв</span>
+            <span class="visually-hidden">Next review</span>
             <svg class="reviews__icon" width="50" height="26" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#left-arrow"></use>
             </svg>
           </button>
         </div>
-        <a class="reviews__write button" href="#">Написать</a>
+        <a class="reviews__write button" href="#">Write</a>
       </div>
     </section>
 
     <section class="contacts">
       <div class="contacts__header">
-          <h2 class="h2 h2--contacts">Контакты</h2>
+          <h2 class="h2 h2--contacts">Сontacts</h2>
           <div class="contacts__wrapper">
-            <p class="contacts__email-wrapper">e-mail:<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
+            <p class="contacts__email-wrapper">mail:<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
             <div class="contacts__address-wrapper">
-              <p>адрес:</p>
+              <p>addr:</p>
               <div class="contacts__address">
-                <p>г. Санкт-Петербург,</p>
-                <p>ул. Большая Конюшенная,</p>
-                <p>д. 19/8, офис 101</p>
+                <p>Saint-Petersburg,</p>
+                <p>Bolshaya Konyushennaya St,</p>
+                <p>19/8, office 101</p>
               </div>
             </div>
           </div>
@@ -208,13 +209,13 @@
             tabindex="0">
           </iframe>
       </div>
-      <a class="contacts__write button" href="#">Напишите нам</a>
+      <a class="contacts__write button" href="#">Write us</a>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <svg class="page-footer__logo-image" width="102" height="34" role="img" aria-label="Логотип магазина «Мишка»"
+      <svg class="page-footer__logo-image" width="102" height="34" role="img" aria-label="Store logo «Mishka»"
         focusable="true">
         <use xlink:href="img/sprite-manual.svg#logo-mishka-footer"></use>
       </svg>
@@ -222,7 +223,7 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Мы в Инстаграме</span>
+            <span class="visually-hidden">Our Instagram</span>
             <svg class="social__icon page-footer__icon" width="22" height="21" aria-hidden="true">
               <use xlink:href="img/sprite-manual.svg#icon-instagram"></use>
             </svg>
@@ -230,7 +231,7 @@
         </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
-              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <span class="visually-hidden">Our Facebook</span>
               <svg class="social__icon page-footer__icon" width="15" height="28" aria-hidden="true">
                 <use xlink:href="img/sprite-manual.svg#icon-facebook"></use>
               </svg>
@@ -238,18 +239,18 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
-              <span class="visually-hidden">Мы в Твиттере</span>
+              <span class="visually-hidden">Our Twitter</span>
               <svg class="social__icon page-footer__icon" width="24" height="20" aria-hidden="true">
                 <use xlink:href="img/sprite-manual.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
       </div>
-      <p class="copyright">Разработано
+      <p class="copyright">Designed
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
-          aria-label="Логотип компании-создателя сайта">
+          aria-label="site logo company creator">
           <svg class="copyright-image page-footer__icon" width="27" height="34" role="img"
-            aria-label="Логотип компании-создателя сайта" focusable="true">
+            aria-label="site logo company creator" focusable="true">
             <use xlink:href="img/sprite-manual.svg#logo-academy"></use>
           </svg>
         </a>
@@ -258,8 +259,8 @@
   </footer>
   <section class="modal">
     <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru/">
-      <h1 class="h1 h1--modal">Добавить в корзину</h1>
-      <p class="modal__title">Выберите размер:</p>
+      <h1 class="h1 h1--modal">Add to basket</h1>
+      <p class="modal__title">Choose size:</p>
       <ul class="modal__list">
             <li>
               <input class="visually-hidden modal__input" type="checkbox" id="s-size" name="s-size" checked>
@@ -274,7 +275,7 @@
               <label for="l-size">L</label>
             </li>
       </ul>
-      <button class="button button--modal" type="submit">Добавить</button>
+      <button class="button button--modal" type="submit">Add</button>
     </form>
   </section>
   <script src="js/svg4everybody.js"></script>
